@@ -72,7 +72,9 @@ class _SignInPageState extends State<SignInPage> {
               const SizedBox(height: 24),
               ButtomCustom(
                 titulo: 'Entrar',
-                onPressed: () {},
+                onPressed: () {
+                  Modular.to.pushNamed('/successSign');
+                },
               ),
               const SizedBox(height: 12),
               TextButtonCustom(
