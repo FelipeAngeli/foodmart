@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:fluttermart/app/module/widgets/btn_custom.dart';
 import 'package:fluttermart/app/utils/custom_color.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,9 +42,11 @@ class SuccessSignPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 80, right: 80, top: 20, bottom: 200),
               child: ButtomCustom(
+                width: double.infinity,
+                height: 45,
                 titulo: 'Fazer Pedido',
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/homePage');
                 },
               ),
             ),

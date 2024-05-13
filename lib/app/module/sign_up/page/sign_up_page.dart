@@ -76,6 +76,8 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 24),
               ButtomCustom(
+                width: double.infinity,
+                height: 45,
                 titulo: 'Registrar',
                 onPressed: () {},
               ),

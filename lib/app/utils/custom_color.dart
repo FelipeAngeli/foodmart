@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class CustomColor {
   static Color backgroundColor = const Color(0xFFF8F8F8);
   static Color lightBackground = const Color(0xFFF0F0F0);
+  static Color shadowColor = const Color(0xFFF2F2F2);
   static Color orange = const Color(0xffFF7B1B);
   static Color fontBlack = const Color(0xFF020202);
   static Color fontLight = const Color(0xFF8D92A3);

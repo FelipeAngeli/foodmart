@@ -5,13 +5,15 @@ import 'package:google_fonts/google_fonts.dart';
 class ButtomCustom extends StatelessWidget {
   final void Function()? onPressed;
   final String titulo;
-  const ButtomCustom({super.key, this.onPressed, required this.titulo});
+  final double width;
+  final double height;
+  const ButtomCustom({super.key, this.onPressed, required this.titulo, required this.width, required this.height});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 45,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(CustomColor.orange),
