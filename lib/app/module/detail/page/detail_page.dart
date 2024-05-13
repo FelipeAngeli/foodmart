@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttermart/app/module/detail/page/components/remove_add_custom.dart';
 import 'package:fluttermart/app/module/widgets/btn_custom.dart';
 import 'package:fluttermart/app/module/widgets/star_custom.dart';
@@ -119,7 +120,7 @@ class _DetailPageState extends State<DetailPage> {
                               const StarCustom(),
                             ],
                           ),
-                          RemoveAddCustom(),
+                          const RemoveAddCustom(),
                         ],
                       ),
                       const SizedBox(height: 8),
@@ -155,7 +156,7 @@ class _DetailPageState extends State<DetailPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Preço',
+                                'Preço total:',
                                 style: GoogleFonts.poppins(
                                   fontSize: 14,
                                   fontWeight: FontWeight.normal,
@@ -176,7 +177,10 @@ class _DetailPageState extends State<DetailPage> {
                             width: 163,
                             height: 45,
                             titulo: 'Peça agora',
-                            onPressed: () {},
+                            onPressed: () {
+                              print('PedidoPage');
+                              Modular.to.pushNamed('/pedidoPage');
+                            },
                           )
                         ],
                       ),
