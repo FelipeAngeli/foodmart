@@ -108,7 +108,7 @@ class PaymentPage extends StatelessWidget {
               width: double.infinity,
               titulo: 'Pagar',
               onPressed: () {
-                Modular.to.pushNamed('/paymentSuccessPage');
+                Modular.to.pushNamed('/paymentFormPage');
               },
             ),
           ],

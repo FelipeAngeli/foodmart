@@ -3,6 +3,7 @@ import 'package:fluttermart/app/module/detail/detail_module.dart';
 import 'package:fluttermart/app/module/detail/page/detail_page.dart';
 import 'package:fluttermart/app/module/home/home_module.dart';
 import 'package:fluttermart/app/module/home/page/home_page.dart';
+import 'package:fluttermart/app/module/payment/page/payment_form_page.dart';
 import 'package:fluttermart/app/module/payment/page/payment_page.dart';
 import 'package:fluttermart/app/module/payment/payment_module.dart';
 import 'package:fluttermart/app/module/pedidos/pedido_module.dart';
@@ -19,7 +20,7 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-    r.child(Modular.initialRoute, child: (context) => PaymentPage());
+    r.child(Modular.initialRoute, child: (context) => const SplashPage());
     r.module(Modular.initialRoute, module: SignInModule());
     r.module(Modular.initialRoute, module: SignUpModule());
     r.module(Modular.initialRoute, module: SuccessSignModule());

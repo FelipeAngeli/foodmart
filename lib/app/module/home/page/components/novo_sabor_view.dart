@@ -8,7 +8,7 @@ class NovoSaborView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 300,
       child: ListView(
         children: [
@@ -55,7 +55,36 @@ class NovoSaborView extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 32),
-              const StarCustom(),
+              // const StarCustom(),
+              Icon(
+                Icons.star,
+                color: CustomColor.orange,
+              ),
+              Icon(
+                Icons.star,
+                color: CustomColor.orange,
+              ),
+              Icon(
+                Icons.star,
+                color: CustomColor.fontLight,
+              ),
+              Icon(
+                Icons.star,
+                color: CustomColor.fontLight,
+              ),
+              Icon(
+                Icons.star,
+                color: CustomColor.fontLight,
+              ),
+              const SizedBox(width: 4),
+              Text(
+                '2.0',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: CustomColor.fontLight,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 15),

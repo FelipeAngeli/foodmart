@@ -79,14 +79,16 @@ class _SignUpPageState extends State<SignUpPage> {
                 width: double.infinity,
                 height: 45,
                 titulo: 'Registrar',
-                onPressed: () {},
+                onPressed: () {
+                  Modular.to.pushNamed('/signIn');
+                },
               ),
               const SizedBox(height: 16),
               RichTextCustom(
                 text: 'Eu já tenho uma conta',
                 linkText: 'Entrar',
                 onLinkTap: () {
-                  Modular.to.pushNamed('/login');
+                  Modular.to.pushNamed('/signIn');
                 },
               ),
             ],

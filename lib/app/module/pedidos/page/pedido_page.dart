@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttermart/app/module/pedidos/page/components/list_pedidos.dart';
 import 'package:fluttermart/app/module/pedidos/page/components/pedidos_antigos.dart';
 import 'package:fluttermart/app/module/widgets/bottom_bar_custom.dart';
@@ -96,9 +97,13 @@ class _PedidoPageState extends State<PedidoPage> with SingleTickerProviderStateM
               height: 300,
               child: TabBarView(
                 controller: _tabController,
-                children: const [
-                  ListPedidos(),
-                  PedidosAntigos(),
+                children: [
+                  ListPedidos(
+                    onTap: () {
+                      Modular.to.pushNamed('/paymentPage');
+                    },
+                  ),
+                  const PedidosAntigos(),
                 ],
               ),
             ),

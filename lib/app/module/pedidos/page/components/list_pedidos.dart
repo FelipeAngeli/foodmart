@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttermart/app/utils/custom_color.dart';
 
 class ListPedidos extends StatelessWidget {
-  const ListPedidos({super.key});
+  final void Function()? onTap;
+  const ListPedidos({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -13,20 +14,26 @@ class ListPedidos extends StatelessWidget {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: CustomColor.backgroundColor,
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: [
-                    BoxShadow(
-                      color: CustomColor.shadowColor,
-                      blurRadius: 10,
-                      offset: const Offset(0, 10),
+              InkWell(
+                onTap: onTap,
+                child: Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: CustomColor.backgroundColor,
+                    borderRadius: BorderRadius.circular(8),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/image/card/item1.png'),
+                      fit: BoxFit.cover,
                     ),
-                  ],
-                ),
-                child: Image.asset(
-                  'assets/image/pedidos/pedido1.png',
+                    boxShadow: [
+                      BoxShadow(
+                        color: CustomColor.shadowColor,
+                        blurRadius: 10,
+                        offset: const Offset(0, 10),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(width: 12),

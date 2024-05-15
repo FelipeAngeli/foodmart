@@ -178,7 +178,6 @@ class _DetailPageState extends State<DetailPage> {
                             height: 45,
                             titulo: 'Peça agora',
                             onPressed: () {
-                              print('PedidoPage');
                               Modular.to.pushNamed('/pedidoPage');
                             },
                           )

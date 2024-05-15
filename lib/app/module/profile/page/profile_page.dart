@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttermart/app/module/profile/page/components/food_market_custom.dart';
 import 'package:fluttermart/app/module/profile/page/components/perfil_custom.dart';
+import 'package:fluttermart/app/module/widgets/app_bar_custom.dart';
 import 'package:fluttermart/app/module/widgets/bottom_bar_custom.dart';
 import 'package:fluttermart/app/module/widgets/dashed_border_custom.dart';
 import 'package:fluttermart/app/utils/custom_color.dart';
@@ -20,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   void _onBottomItemTapped(int index) {
@@ -32,6 +34,9 @@ class _ProfilePageState extends State<ProfilePage> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const CustomAppBar(
+        title: '',
+      ),
       body: Container(
         padding: const EdgeInsets.all(24),
         color: CustomColor.backgroundColor,
@@ -39,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> with SingleTickerProviderStat
         width: double.infinity,
         child: Column(
           children: [
-            const SizedBox(height: 50),
+            // const SizedBox(height: 25),
             CustomPaint(
               painter: DashedBorderCustom(),
               child: Container(
@@ -111,10 +116,10 @@ class _ProfilePageState extends State<ProfilePage> with SingleTickerProviderStat
           ],
         ),
       ),
-      bottomNavigationBar: BottomBarCustom(
-        selectedIndex: _selectedPageIndex,
-        onItemSelected: _onBottomItemTapped,
-      ),
+      // bottomNavigationBar: BottomBarCustom(
+      //   selectedIndex: _selectedPageIndex,
+      //   onItemSelected: _onBottomItemTapped,
+      // ),
     );
   }
 }

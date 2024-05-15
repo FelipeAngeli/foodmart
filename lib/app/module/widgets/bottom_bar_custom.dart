@@ -29,33 +29,32 @@ class _BottomBarCustomState extends State<BottomBarCustom> {
             AssetImage('assets/icons/home.png'),
             size: 24,
           ),
-          label: '',
-          activeIcon: ImageIcon(
-            AssetImage('assets/icons/home.png'),
-            size: 24,
-          ),
+          label: 'Home',
+          tooltip: 'home',
         ),
         BottomNavigationBarItem(
           icon: ImageIcon(
             AssetImage('assets/icons/shop.png'),
             size: 24,
           ),
-          label: '',
+          label: 'Shop',
+          tooltip: 'shop',
         ),
         BottomNavigationBarItem(
           icon: ImageIcon(
             AssetImage('assets/icons/fav.png'),
             size: 24,
           ),
-          label: '',
+          label: 'Fav',
+          tooltip: 'fav',
         ),
         BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage('assets/icons/perfil.png'),
-            size: 24,
-          ),
-          label: '',
-        ),
+            icon: ImageIcon(
+              AssetImage('assets/icons/perfil.png'),
+              size: 24,
+            ),
+            label: 'perfil',
+            tooltip: 'perfil'),
       ],
     );
   }

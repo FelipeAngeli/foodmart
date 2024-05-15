@@ -3,7 +3,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttermart/app/module/payment/page/components/delivery_custom.dart';
 import 'package:fluttermart/app/module/payment/page/components/detalhes_custom.dart';
 import 'package:fluttermart/app/module/widgets/app_bar_custom.dart';
-import 'package:fluttermart/app/module/widgets/btn_custom.dart';
 import 'package:fluttermart/app/utils/custom_color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -134,13 +133,44 @@ class PaymentResumePage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 64),
-            ButtomCustom(
-              height: 45,
+            SizedBox(
               width: double.infinity,
-              titulo: 'Cancelar meu pedido',
-              onPressed: () {
-                Modular.to.pushNamed('/paymentCancelPage');
-              },
+              height: 45,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      side: BorderSide(color: CustomColor.orange),
+                      borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    ),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      return CustomColor.backgroundColor;
+                    }
+                    return CustomColor.backgroundColor;
+                  }),
+                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.transparent;
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+                onPressed: () {
+                  Modular.to.pushNamed('/paymentCancelPage');
+                },
+                child: Text(
+                  'Cancelar meu pedido',
+                  style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: CustomColor.orange,
+                  ),
+                ),
+              ),
             ),
           ],
         ),

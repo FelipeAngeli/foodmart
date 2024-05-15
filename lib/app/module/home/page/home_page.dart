@@ -78,7 +78,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 ),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Modular.to.pushNamed('/profilePage');
+            },
           ),
         ],
       ),
